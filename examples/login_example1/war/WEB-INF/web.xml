@@ -12,6 +12,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Whoseturn</servlet-name>
 		<url-pattern>/whoseturn</url-pattern>
 	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>login.xhtml</welcome-file>
 	</welcome-file-list>
