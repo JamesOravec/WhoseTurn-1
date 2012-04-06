@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Record {
+	
 	private Map<String, history> records = new HashMap<String,history>();
 	
 	class history {
@@ -15,8 +16,6 @@ public class Record {
 		int timesUsed = 0;
 	}
 	
-	
-	// Functions
 	int getTimesGone(String category) {
 		if(!records.containsKey(category))
 			return -1;
@@ -37,7 +36,7 @@ public class Record {
 		incrementTimesGone(records.get(category));
 	}
 	
-	void increaseTimeUsed(String category) {
+	void increaseTimesUsed(String category) {
 		updateRecord(category);
 		
 		incrementTimesUsed(records.get(category));
@@ -49,13 +48,14 @@ public class Record {
 		if(!records.containsKey(category))
 			records.put(category, new history());
 	}
-	
+		
 	void incrementTimesGone(history userHistory) {
 		userHistory.timesGone++;
 	}
-	
+		
 	void incrementTimesUsed(history userHistory) {
 		userHistory.timesUsed++;
 	}
+	
 
 }
